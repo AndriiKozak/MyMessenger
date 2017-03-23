@@ -1,6 +1,6 @@
 package com.mycompany.mymessenger.repository;
 
-import com.mycompany.mymessanger.domain.Customer;
+import com.mycompany.mymessenger.domain.Customer;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.data.rest.core.annotation.RestResource;

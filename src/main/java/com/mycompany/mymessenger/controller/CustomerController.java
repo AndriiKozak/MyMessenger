@@ -1,7 +1,7 @@
 package com.mycompany.mymessenger.controller;
 
-import com.mycompany.mymessanger.domain.Customer;
-import com.mycompany.mymessanger.repository.CustomerRepository;
+import com.mycompany.mymessenger.domain.Customer;
+import com.mycompany.mymessenger.repository.CustomerRepository;
 import java.net.URISyntaxException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

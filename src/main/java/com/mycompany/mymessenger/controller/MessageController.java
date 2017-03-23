@@ -1,7 +1,7 @@
 package com.mycompany.mymessenger.controller;
 
-import com.mycompany.mymessanger.domain.Message;
-import com.mycompany.mymessanger.repository.MessageRepository;
+import com.mycompany.mymessenger.domain.Message;
+import com.mycompany.mymessenger.repository.MessageRepository;
 import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.List;
