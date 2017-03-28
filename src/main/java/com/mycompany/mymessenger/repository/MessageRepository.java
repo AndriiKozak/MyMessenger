@@ -8,5 +8,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
 public interface MessageRepository extends CrudRepository<Message, Long> {
+
     List<Message> findBySenderAndReciever(Customer sender, Customer reciever);
 }
