@@ -1,5 +1,7 @@
 package com.mycompany.mymessenger.domain;
 
+import java.util.List;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,6 +22,8 @@ public class Message {
     @ManyToOne
     private Customer reciever;
     private String body;
+    @ElementCollection(targetClass = String.class)
+    private List<String> attachments;
 
     @XmlAttribute
     public Long getId() {
@@ -55,6 +59,15 @@ public class Message {
 
     public void setBody(String body) {
         this.body = body;
+    }
+
+    @XmlElement
+    public List<String> getAttachments() {
+        return attachments;
+    }
+
+    public void setAttachments(List<String> attachments) {
+        this.attachments = attachments;
     }
 
 }

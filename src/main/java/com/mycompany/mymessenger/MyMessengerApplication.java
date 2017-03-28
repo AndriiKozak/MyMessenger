@@ -16,23 +16,23 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 @EnableSwagger2
 @SpringBootApplication
-public class MyMessengerApplication implements CommandLineRunner {    
+public class MyMessengerApplication implements CommandLineRunner {
 
     @Autowired
     ConversationService service;
 
     @Value("${service.port}")
     private String servicePort;
-    
-     @Bean
-    public Docket api() { 
-        return new Docket(DocumentationType.SWAGGER_2)  
-          .select()                                  
-          .apis(RequestHandlerSelectors.any())              
-          .paths(PathSelectors.any())                          
-          .build();                                           
+
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.any())
+                .paths(PathSelectors.any())
+                .build();
     }
-    
+
     @Override
     public void run(String... args) throws Exception {
         Endpoint.publish("http://localhost:" + servicePort
